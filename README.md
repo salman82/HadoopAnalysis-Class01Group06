@@ -1,1 +1,1 @@
-# HadoopAnalysis-Class01Group06
+# Hadoop vs Java Wordcount Efficiency Analysis
