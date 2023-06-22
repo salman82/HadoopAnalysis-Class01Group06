@@ -2,7 +2,7 @@
 ## **Authors**
 - Brian Yudha Sandi
 - Muhammad Irfan Fakhrianto
-- Muhammad Rizky Utomo
+- Muhammad Rizky Utomo - 2106731320
 - Muhamad Salman Sadad - 2106731371
 
 ## **Hadoop Introduction**
