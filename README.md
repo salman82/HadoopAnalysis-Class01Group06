@@ -1,6 +1,6 @@
 # Hadoop vs Java Wordcount Efficiency Analysis
 ## **Authors**
-- Brian Yudha Sandi
+- Brian Yudha Sandi - 2106637082
 - Muhammad Irfan Fakhrianto
 - Muhammad Rizky Utomo - 2106731320
 - Muhamad Salman Sadad - 2106731371
@@ -17,13 +17,16 @@ Arsitektur Hadoop terdiri dari 4 modul utama:
 <p align="justify">Apache MapReduce adalah model pemrograman yang digunakan untuk memproses data yang terdistribusi di dalam cluster Hadoop secara paralel. MapReduce melakukan pemrosesan paralel dengan membagi tugas analisis menjadi dua tahap: "map" dan "reduce". Penggunaan MapReduce memudahkan untuk melakukan scaling terhadap banyak node computing.</p>
 
 ### 3) Yet Another Resource Negotiator (YARN)
-<p align="justify">?????????????</p>
+<p align="justify">Hadoop YARN adalah komponen utama dalam Apache Hadoop yang mengelola sumber daya dan penjadwalan tugas dalam cluster. YARN memisahkan manajemen sumber daya dari pemrosesan data dan memungkinkan pengolahan data yang besar dan kompleks. Sebelum YARN, Hadoop hanya menggunakan model MapReduce yang memiliki batasan dalam memanfaatkan sumber daya secara efisien. Dengan YARN, Hadoop dapat menjalankan berbagai kerangka kerja pemrosesan data seperti Apache Spark, Apache Flink, dan Apache Storm dalam satu cluster dengan manajemen sumber daya yang optimal. YARN mengalokasikan dan mengelola sumber daya seperti CPU, memori, dan penyimpanan untuk aplikasi yang berjalan di atasnya</p>
 
 ### 4) Hadoop Common
-<p align="justify">?????????????</p>
+<p align="justify">Hadoop Common adalah komponen inti dari platform Apache Hadoop. Ini menyediakan serangkaian perpustakaan dan utilitas yang digunakan oleh komponen-komponen lain dalam ekosistem Hadoop. Hadoop Common menyediakan layanan dan fungsionalitas dasar yang dibutuhkan oleh aplikasi-aplikasi yang berjalan di atas Hadoop.</p>
 
 ## **Installation**
-<p align="justify">?????????????</p>
+<p align="justify">Berikut adalah langkah-langkah umum untuk menginstal Hadoop :</p>
+<p align="justify">1. Unduh Hadoop melalui situs resmi Apache Hadoop (https://hadoop.apache.org)</p> 
+<p align="justify">2. Ekstrak paket Hadoop yang telah diunduh ke direktori sistem</p>
+<p align="justify">3. </p>
 
 ## **Wordcount Testing**
 <p align="justify">?????????????</p>
