@@ -1,7 +1,7 @@
 # Hadoop vs Java Wordcount Efficiency Analysis
 ## **Authors**
 - Brian Yudha Sandi - 2106637082
-- Muhammad Irfan Fakhrianto
+- Muhammad Irfan Fakhrianto - 1806200356
 - Muhammad Rizky Utomo - 2106731320
 - Muhamad Salman Sadad - 2106731371
 
@@ -17,7 +17,7 @@ Arsitektur Hadoop terdiri dari 4 modul utama:
 <p align="justify">Apache MapReduce adalah model pemrograman yang digunakan untuk memproses data yang terdistribusi di dalam cluster Hadoop secara paralel. MapReduce melakukan pemrosesan paralel dengan membagi tugas analisis menjadi dua tahap: "map" dan "reduce". Penggunaan MapReduce memudahkan untuk melakukan scaling terhadap banyak node computing.</p>
 
 ### 3) Yet Another Resource Negotiator (YARN)
-<p align="justify">Hadoop YARN adalah komponen utama dalam Apache Hadoop yang mengelola sumber daya dan penjadwalan tugas dalam cluster. YARN memisahkan manajemen sumber daya dari pemrosesan data dan memungkinkan pengolahan data yang besar dan kompleks. Sebelum YARN, Hadoop hanya menggunakan model MapReduce yang memiliki batasan dalam memanfaatkan sumber daya secara efisien. Dengan YARN, Hadoop dapat menjalankan berbagai kerangka kerja pemrosesan data seperti Apache Spark, Apache Flink, dan Apache Storm dalam satu cluster dengan manajemen sumber daya yang optimal. YARN mengalokasikan dan mengelola sumber daya seperti CPU, memori, dan penyimpanan untuk aplikasi yang berjalan di atasnya</p>
+<p align="justify">Hadoop YARN adalah komponen utama dalam Apache Hadoop yang mengelola resource dan penjadwalan tugas dalam cluster. YARN memisahkan manajemen resource dari pemrosesan data dan memungkinkan pengolahan data yang besar dan kompleks. Sebelum YARN, Hadoop hanya menggunakan model MapReduce yang memiliki batasan dalam memanfaatkan resource secara efisien. Dengan YARN, Hadoop dapat menjalankan berbagai kerangka kerja pemrosesan data seperti Apache Spark, Apache Flink, dan Apache Storm dalam satu cluster dengan manajemen resource yang optimal. YARN mengalokasikan dan mengelola resource seperti CPU, memori, dan penyimpanan untuk aplikasi yang berjalan di atasnya</p>
 
 ### 4) Hadoop Common
 <p align="justify">Hadoop Common adalah komponen inti dari platform Apache Hadoop. Ini menyediakan serangkaian perpustakaan dan utilitas yang digunakan oleh komponen-komponen lain dalam ekosistem Hadoop. Hadoop Common menyediakan layanan dan fungsionalitas dasar yang dibutuhkan oleh aplikasi-aplikasi yang berjalan di atas Hadoop.</p>
@@ -33,10 +33,10 @@ Arsitektur Hadoop terdiri dari 4 modul utama:
 <p align="justify">7. Inisialisasi HDFS & bug fix</p>
 <p align="justify">8. Memulai HDFS daemon</p>
 <p align="justify">9. Memulai YARN daemon</p>
-<p align="justify">10. Verifkasi proses Java</p>
+<p align="justify">10. Verifikasi proses Java</p>
 
 ## **Wordcount Testing**
-<p align="justify">Penulis menguji kemampuan Hadoop dengan memberikan file ukuran 10 MB, 50 MB, 100 MB, 500 MB dan 1 GB berisi kata-kata dari lagu “Never Gonna Give You Up” yang di-generate secara acak dengan sebuah program. Kelima file ini dijalankan pada program MapReduce di Hadoop untuk mencari jumlah setiap kata yang ada di dalamnya. 
+<p align="justify">Penulis menguji kemampuan Hadoop dengan memberikan file ukuran 10 MB, 50 MB, 100 MB, 500 MB dan 1 GB berisi kata-kata dari lagu “Never Gonna Give You Up” yang di-generate secara acak dengan sebuah program. Kelima file ini dijalankan pada program MapReduce di Hadoop untuk mencari jumlah setiap kata yang ada di dalamnya.</p>
 Selain menjalankan program ini di Hadoop, sebuah program Java lain yang tidak menggunakan Hadoop dibuat sebagai perbandingan dengan MapReduce Hadoop.
 
 ## **Reference**
