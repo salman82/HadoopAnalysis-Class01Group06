@@ -26,7 +26,14 @@ Arsitektur Hadoop terdiri dari 4 modul utama:
 <p align="justify">Berikut adalah langkah-langkah umum untuk menginstal Hadoop :</p>
 <p align="justify">1. Unduh Hadoop melalui situs resmi Apache Hadoop (https://hadoop.apache.org)</p> 
 <p align="justify">2. Ekstrak paket Hadoop yang telah diunduh ke direktori sistem</p>
-<p align="justify">3. </p>
+<p align="justify">3. Install Hadoop native IO binary</p>
+<p align="justify">4. (Opsional) Instalasi Java JDK</p>
+<p align="justify">5. Konfigurasi Environment Variable</p>
+<p align="justify">6. Konfigurasi Hadoop</p>
+<p align="justify">7. Inisialisasi HDFS & bug fix</p>
+<p align="justify">8. Memulai HDFS daemon</p>
+<p align="justify">9. Memulai YARN daemon</p>
+<p align="justify">10. Verifkasi proses Java</p>
 
 ## **Wordcount Testing**
 <p align="justify">?????????????</p>
