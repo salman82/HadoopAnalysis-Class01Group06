@@ -36,20 +36,8 @@ Arsitektur Hadoop terdiri dari 4 modul utama:
 <p align="justify">10. Verifkasi proses Java</p>
 
 ## **Wordcount Testing**
-<p align="justify">Untuk Wordcount Testing, perbandingan antara Java dan Hadoop, dimana untuk hasil percobaan diambil dari 5 kali testing yang
-kemudian diambil nilai rata-ratanya. Hasil percobaan adalah sebagai berikut : <br>
-JAVA <br>
-10MB: 2,1244s <br>
-50MB: 10,4306s <br>
-100MB: 31,3466s <br>
-
-Hadoop <br>
-10MB: 21,964s <br>
-50MB: 28,9392s <br>
-100MB: 36,694s <br>
-500MB: 47,1064s <br>
-1000MB: 83,9734s <br>
-</p>
+<p align="justify">Penulis menguji kemampuan Hadoop dengan memberikan file ukuran 10 MB, 50 MB, 100 MB, 500 MB dan 1 GB berisi kata-kata dari lagu “Never Gonna Give You Up” yang di-generate secara acak dengan sebuah program. Kelima file ini dijalankan pada program MapReduce di Hadoop untuk mencari jumlah setiap kata yang ada di dalamnya. 
+Selain menjalankan program ini di Hadoop, sebuah program Java lain yang tidak menggunakan Hadoop dibuat sebagai perbandingan dengan MapReduce Hadoop.
 
 ## **Reference**
 - https://hadoop.apache.org
