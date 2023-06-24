@@ -44,4 +44,5 @@ Selain menjalankan program ini di Hadoop, sebuah program Java lain yang tidak me
 - https://aws.amazon.com/emr/details/hadoop/what-is-hadoop/
 - https://www.databricks.com/glossary/hadoop-distributed-file-system-hdfs
 - https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm
+- https://www.geeksforgeeks.org/hadoop-architecture/
 - https://www.geeksforgeeks.org/hadoop-yarn-architecture/
