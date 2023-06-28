@@ -107,8 +107,8 @@ export JAVA_HOME= C:\Java\jdk1.8.0_202
 </configuration>
 ```
 ### **6) Inisialisasi HDFS**
-Buka terminal atau command prompt.
-Jalankan perintah berikut untuk membuat direktori yang dibutuhkan oleh Hadoop:
+- Buka terminal atau command prompt, dan arahkan directory-nya ke folder sbin dalam hadoop.
+- Jalankan perintah berikut untuk membuat direktori yang dibutuhkan oleh Hadoop:
 ```
 hdfs namenode -format
 ```
@@ -122,8 +122,10 @@ start-yarn.sh
 
 ### **8) Verifikasi Instalasi**
 - Buka web browser dan kunjungi http://localhost:50070 untuk mengakses Hadoop NameNode web UI.
+  ![alt text](https://www.tutorialspoint.com/hadoop/images/hadoop_on_browser.jpg)
 - Pastikan tampilan web UI muncul tanpa kesalahan.
 - Selanjutnya, kunjungi http://localhost:8088 untuk mengakses YARN Resource Manager web UI.
+  ![alt text](https://www.tutorialspoint.com/hadoop/images/hadoop_application_cluster.jpg)
 - Pastikan juga tampilan web UI YARN muncul tanpa kesalahan.
 
 ## **Wordcount Testing**
