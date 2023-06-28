@@ -130,7 +130,7 @@ start-yarn.sh
 
 ## **Wordcount Testing**
 <p align="justify">Penulis menguji kemampuan Hadoop dengan memberikan file ukuran 10 MB, 50 MB, 100 MB, 500 MB dan 1 GB berisi kata-kata dari lagu “Never Gonna Give You Up” yang di-generate secara acak dengan sebuah program. Kelima file ini dijalankan pada program MapReduce di Hadoop untuk mencari jumlah setiap kata yang ada di dalamnya.</p>
-Selain menjalankan program ini di Hadoop, sebuah program Java lain yang tidak menggunakan Hadoop dibuat sebagai perbandingan dengan MapReduce Hadoop.
+Selain menjalankan program ini di Hadoop, wordcount akan dilakukan juga pada sebuah program Java dibuat sebagai perbandingan dengan MapReduce Hadoop.
 
 ## **Reference**
 - https://hadoop.apache.org
