@@ -23,7 +23,7 @@ Arsitektur Hadoop terdiri dari 4 modul utama:
 <p align="justify">Hadoop Common adalah komponen inti dari platform Apache Hadoop. Ini menyediakan serangkaian perpustakaan dan utilitas yang digunakan oleh komponen-komponen lain dalam ekosistem Hadoop. Hadoop Common menyediakan layanan dan fungsionalitas dasar yang dibutuhkan oleh aplikasi-aplikasi yang berjalan di atas Hadoop.</p>
 
 ## **Installation**
-Berikut adalah langkah-langkah instalasi Hadoop dalam bentuk markdown:
+Berikut adalah langkah-langkah instalasi Hadoop dalam sistem operasi Windows:
 
 ### **1) Persiapan Awal**
 
