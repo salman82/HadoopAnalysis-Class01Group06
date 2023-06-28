@@ -23,17 +23,108 @@ Arsitektur Hadoop terdiri dari 4 modul utama:
 <p align="justify">Hadoop Common adalah komponen inti dari platform Apache Hadoop. Ini menyediakan serangkaian perpustakaan dan utilitas yang digunakan oleh komponen-komponen lain dalam ekosistem Hadoop. Hadoop Common menyediakan layanan dan fungsionalitas dasar yang dibutuhkan oleh aplikasi-aplikasi yang berjalan di atas Hadoop.</p>
 
 ## **Installation**
-<p align="justify">Berikut adalah langkah-langkah umum untuk menginstal Hadoop :</p>
-<p align="justify">1. Unduh Hadoop melalui situs resmi Apache Hadoop (https://hadoop.apache.org)</p> 
-<p align="justify">2. Ekstrak paket Hadoop yang telah diunduh ke direktori sistem</p>
-<p align="justify">3. Install Hadoop native IO binary</p>
-<p align="justify">4. (Opsional) Instalasi Java JDK</p>
-<p align="justify">5. Konfigurasi Environment Variable</p>
-<p align="justify">6. Konfigurasi Hadoop</p>
-<p align="justify">7. Inisialisasi HDFS & bug fix</p>
-<p align="justify">8. Memulai HDFS daemon</p>
-<p align="justify">9. Memulai YARN daemon</p>
-<p align="justify">10. Verifikasi proses Java</p>
+Berikut adalah langkah-langkah instalasi Hadoop dalam bentuk markdown:
+
+### **1) Persiapan Awal**
+
+- Pastikan sistem operasi yang digunakan sudah terpasang dan dikonfigurasi dengan benar.
+Unduh paket instalasi Hadoop dari situs resmi Apache Hadoop: <br>
+https://hadoop.apache.org/ <br>
+- Pastikan versi Hadoop yang diunduh sesuai dengan kebutuhan.
+
+### **2) Ekstraksi Paket**
+- Buka terminal atau command prompt.
+- Pindah ke direktori tempat menyimpan paket instalasi Hadoop.
+- Ekstrak paket instalasi dengan menggunakan perintah berikut:
+
+### **3) Konfigurasi Environment**
+- Buka file .bashrc atau .bash_profile di direktori home.
+- Tambahkan baris-baris berikut di akhir file:
+```
+# Set Hadoop-related environment variables
+export HADOOP_HOME=/path/to/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+```
+Note: ganti /path/to/hadoop dengan direktori Hadoop yang diekstrak pada langkah sebelumnya
+
+### **4) Konfigurasi Hadoop**
+- Buka folder hadoop yang telah diekstrak sebelumnya.
+- Buka file etc/hadoop/hadoop-env.sh untuk mengatur variabel environment Hadoop.
+- Temukan baris yang mengatur JAVA_HOME dan pastikan variabel tersebut menunjuk ke direktori instalasi Java yang sesuai. Untuk penggunaan kami, kami menggunakan Java versi 1.8.
+```
+export JAVA_HOME= C:\Java\jdk1.8.0_202
+```
+
+### **5) Konfigurasi Cluster Hadoop**
+- Buka file etc/hadoop/core-site.xml dan tambahkan konfigurasi berikut:
+```
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+</configuration>
+```
+
+- Buka file etc/hadoop/hdfs-site.xml dan tambahkan konfigurasi berikut:
+```
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>1</value>
+  </property>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>/C:/hadoop/data/namenode</value>
+  </property>
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>/C:/hadoop/data/datanode</value>
+  </property>
+</configuration>
+```
+- Buka file etc/hadoop/mapred-site.xml dan tambahkan konfigurasi berikut:
+```
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
+```
+- Buka file etc/hadoop/yarn-site.xml dan tambahkan konfigurasi berikut:
+```
+<configuration>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.auxservices.mapreduce.shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+</configuration>
+```
+### **6) Inisialisasi HDFS**
+Buka terminal atau command prompt.
+Jalankan perintah berikut untuk membuat direktori yang dibutuhkan oleh Hadoop:
+```
+hdfs namenode -format
+```
+
+### **7) Memulai Daemons Hadoop**
+- Masih di terminal atau command prompt yang sama, jalankan perintah berikut untuk memulai daemons Hadoop:
+```
+start-dfs.sh
+start-yarn.sh
+```
+
+### **8) Verifikasi Instalasi**
+- Buka web browser dan kunjungi http://localhost:50070 untuk mengakses Hadoop NameNode web UI.
+- Pastikan tampilan web UI muncul tanpa kesalahan.
+- Selanjutnya, kunjungi http://localhost:8088 untuk mengakses YARN Resource Manager web UI.
+- Pastikan juga tampilan web UI YARN muncul tanpa kesalahan.
 
 ## **Wordcount Testing**
 <p align="justify">Penulis menguji kemampuan Hadoop dengan memberikan file ukuran 10 MB, 50 MB, 100 MB, 500 MB dan 1 GB berisi kata-kata dari lagu “Never Gonna Give You Up” yang di-generate secara acak dengan sebuah program. Kelima file ini dijalankan pada program MapReduce di Hadoop untuk mencari jumlah setiap kata yang ada di dalamnya.</p>
