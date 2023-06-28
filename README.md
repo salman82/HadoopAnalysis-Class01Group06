@@ -132,6 +132,7 @@ Selain menjalankan program ini di Hadoop, sebuah program Java lain yang tidak me
 
 ## **Reference**
 - https://hadoop.apache.org
+- https://www.tutorialspoint.com/hadoop/hadoop_enviornment_setup.htm
 - https://aws.amazon.com/emr/details/hadoop/what-is-hadoop/
 - https://www.databricks.com/glossary/hadoop-distributed-file-system-hdfs
 - https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm
